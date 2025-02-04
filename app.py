@@ -129,12 +129,12 @@ def process_images():
             cropped = crop_shoe(image)
 
             # Scale the cropped image to a width of 1024 pixels
-            scaled = scale_image(cropped, target_width=1024)
+            scaled = scale_image(cropped, target_width=1698)
             width, height = scaled.size
 
             # Then, add the uniform padding.
-            yPadding = int((800 - height) / 2)
-            padded = add_padding(scaled, 300, yPadding)
+            yPadding = int((2048 - height) / 2)
+            padded = add_padding(scaled, 175, yPadding)
 
             img_str = pil_image_to_base64(padded)
             processed_images.append({
